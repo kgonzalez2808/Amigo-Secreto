@@ -24,4 +24,16 @@ function agregarAmigo() {
     actualizarListaDeAmigos();
     limpiarCaja();
     return;    
-}  
+} 
+
+
+//Funcion para mostrar los nombres ingresados en forma de lista 
+
+function actualizarListaDeAmigos() {
+    listaDeAmigos.innerHTML = '';
+    for (var i = 1; i <= amigos.length; i++) {
+        let nombreAgregado = document.createElement('li');
+        nombreAgregado.textContent = ` ${amigos[i - 1]}`;
+        listaDeAmigos.appendChild(nombreAgregado);
+    }
+}
