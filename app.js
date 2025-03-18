@@ -56,3 +56,14 @@ function limpiarCaja() {
     document.getElementById('amigo').value = '';
 }
 
+
+//Reiniciando el programa para nueva lista de amigos.
+function nuevaLista() {
+    if (amigos.length !='') {
+    location.reload();
+    amigos.splice(0,amigos.length);
+    } else {
+        alert('La lista se encuentra vacia.');
+    }
+    
+}
