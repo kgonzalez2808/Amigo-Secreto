@@ -6,9 +6,7 @@ let amigoSorteado = document.getElementById('resultado');
 let reiniciar = document.getElementById('reiniciar');
 
 //Funcion para capturar el imput donde se ingresan los nombres
-
 function agregarAmigo() {
-    
     let nombreAmigo = document.getElementById('amigo').value;
     //Valida repeticion.
     if (amigos.includes(nombreAmigo)) {
@@ -25,10 +23,7 @@ function agregarAmigo() {
     limpiarCaja();
     return;    
 } 
-
-
 //Funcion para mostrar los nombres ingresados en forma de lista 
-
 function actualizarListaDeAmigos() {
     listaDeAmigos.innerHTML = '';
     for (var i = 1; i <= amigos.length; i++) {
@@ -37,10 +32,8 @@ function actualizarListaDeAmigos() {
         listaDeAmigos.appendChild(nombreAgregado);
     }
 }
-
 // Funcion para sortear  nombre de la lista tomando el indice aleatoriamente
 // y muestra el resultado en pantalla.
-
 function sortearAmigo() {
 
     if (amigos.length >= 2) {
@@ -50,13 +43,10 @@ function sortearAmigo() {
         alert('Debe añadir al menos dos nombres.');
     } 
 }
-
 // Vacia el imput una ves tomado el dato ingresado por el usuario.
 function limpiarCaja() {
     document.getElementById('amigo').value = '';
 }
-
-
 //Reiniciando el programa para nueva lista de amigos.
 function nuevaLista() {
     if (amigos.length !='') {
@@ -65,5 +55,4 @@ function nuevaLista() {
     } else {
         alert('La lista se encuentra vacia.');
     }
-    
 }
