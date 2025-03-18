@@ -37,3 +37,22 @@ function actualizarListaDeAmigos() {
         listaDeAmigos.appendChild(nombreAgregado);
     }
 }
+
+// Funcion para sortear  nombre de la lista tomando el indice aleatoriamente
+// y muestra el resultado en pantalla.
+
+function sortearAmigo() {
+
+    if (amigos.length >= 2) {
+        let amigoAleatorio = Math.floor(Math.random() * amigos.length);
+        amigoSorteado.innerHTML = `El amigo sorteado es: ${amigos[amigoAleatorio]}.`;
+    } else {
+        alert('Debe añadir al menos dos nombres.');
+    } 
+}
+
+// Vacia el imput una ves tomado el dato ingresado por el usuario.
+function limpiarCaja() {
+    document.getElementById('amigo').value = '';
+}
+
